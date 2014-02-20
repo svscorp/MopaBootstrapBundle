@@ -517,7 +517,9 @@
     {% if widget_remove_btn|default(null) %}
     {% set button_type = 'remove' %}
     {% set button_values = widget_remove_btn %}
-    {{ block('collection_button') }}
+    <div class="{{ horizontal_remove_btn_wrapper_class }}">
+        {{ block('collection_button') }}
+    </div>
     {% endif %}
     {% if widget_remove_btn.wrapper_div is not sameas(false) %}
             </div>
